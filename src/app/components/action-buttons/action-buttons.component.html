@@ -1,0 +1,19 @@
+<button id="microphone" onclick="changeAction(101)">
+    <i class="fas fa-video-slash"></i>
+    מצלמה
+</button>
+
+<button id="sharescreen" onclick="changeAction(102)">
+    <i class="fas fa-microphone"></i>
+    מקרופון
+</button>
+
+<button id="camera" onclick="changeAction(103)">
+    <i class="fas fa-shared"></i>
+    שיתוף
+</button>
+
+<button *ngIf="isAdmin" id="camera" onclick="changeAction(103)">
+    <i class="fas fa-shared"></i>
+    השתק את כלל המשתתפים
+</button>

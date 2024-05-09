@@ -1,0 +1,24 @@
+
+<div class="participant">
+    <div *ngIf="isCameraOn; else cameraOff">
+      <!-- אם הוידאו פועל, הצג את הוידאו -->
+      <video [src]="" autoplay muted></video>
+    </div>
+    <ng-template #cameraOff>
+      <!-- אם הוידאו לא פועל, הצג אייקון של מצלמה כבויה -->
+      <i class="fas fa-video-slash"></i>
+    </ng-template>
+
+    <div class="participant-info">
+      <p><label *ngIf="actualParticipantIsMine">אני - </label></label>{{ participant.Name }}</p>
+      <p>{{ participant.Role }}</p>
+    </div>
+
+    <div class="float-letf">
+        <div class="mute-icon">
+            <i  *ngIf="isMicrophoneOn" class="fas fa-microphone-slash"></i>
+            <i  *ngIf="isMicrophoneOn == true" class="fas fa-microphone-slash"></i>
+          </div>
+    </div>
+  </div>
+  
